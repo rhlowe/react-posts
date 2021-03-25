@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <h1>Posts</h1>
 
-      // Finally, `fetchStatus` controls what is visible in every case.
+      {/* Finally, `fetchStatus` controls what is visible in every case. */}
       {fetchStatus === 'loading' &&
         <section>
           <h2>Loading...</h2>
@@ -65,18 +65,18 @@ function App() {
       }
 
       {fetchStatus === 'done' &&
-        <section>
+        <div>
           <ReloadButton />
           <PostList />
-        </section>
+        </div>
       }
 
       {fetchStatus === 'error' &&
-        <section>
+        <div>
           <h2>Error 😵</h2>
           <p>There was an error loading your posts, please try again.</p>
           <ReloadButton />
-        </section>
+        </div>
       }
     </div>
   );
